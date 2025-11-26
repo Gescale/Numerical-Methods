@@ -1,2 +1,2 @@
 # Numerical Methods
-This is a repo containing most of the numerical methods implementations in either C++, Python, or Octave code.
+This is a repo containing some numerical methods implementations in either C++, Python, or Octave code.
