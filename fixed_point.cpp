@@ -8,25 +8,24 @@ double g(double x) {
 }
 
 void fixed_point_iteration(double p0, double TOL, int N0) {
-    int i = 1; // Initialize iteration counter
-    double p;  // Store the next approximation
+    int i = 1;
+    double p;
     
     while (i <= N0) {
-        p = g(p0); // Compute next approximation
+        p = g(p0); 
         std::cout << "Iteration " << i << ": p = " << p << "\n";
         
-        // Check convergence
+        
         if (std::fabs(p - p0) < TOL) {
             std::cout << "The method converged to p = " << std::setprecision(6) << p << " after " << i << " iterations.\n";
             return;
         }
         
-        // Update for the next iteration
+        
         p0 = p;
         i++;
     }
     
-    // If the loop completes without finding a solution
     std::cout << "The method failed after " << N0 << " iterations.\n";
 }
 
